@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<!-- sidenav code sourced from
+http://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav -->
+<html>
+<style>
+
+.main-image {
+  width:100vw;
+  min-height:296px;
+  background-position:center center;
+  background-repeat:no-repeat;
+  object-fit:cover;
+  background-size:cover;
+  text-align:center;
+  padding-top:14vh;
+  padding-bottom:12vh;
+  margin-left: 0px;
+}
+.main-image {
+  padding-top:10vh;
+  padding-bottom:8vh;
+}
+
+body, p, td, table, tr, .medText {
+	font-size: 12pt;
+	font-family: arial !important;
+	color: #777;
+	line-height: 12pt;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.main {
+  padding-left: 10vh;
+  padding-right: 10vh;
+}
+
+h1 {
+	font-size: 38pt !important;
+	text-align: center;
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: 5pt;
+	color: #fff;
+}
+
+h2 {
+  text-align: left;
+  font-weight: normal;
+  color: #555 !important;
+  text-decoration: none;
+}
+
+h3 {
+	font-size: 22pt !important;
+	text-align: center;
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: 3pt;
+	color: #fff;
+}
+
+h4 {
+  text-align: right;
+  padding-right: 5px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+/* Side navigation menu sourced from we3schools */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* Top navigation bar sourced from we3schools */
+
+body {margin:0;}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #222;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #818181;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #333;
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(60,0,0,0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(60,0,0,0.8);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(60,0,0,0.4);
+}
+
+</style>
+
+<html>
+  <body>
+
+    <ul>
+      <li><br><span style="font-size:30px;cursor:pointer;padding-left:10px;padding-right:10px;" onclick="openNav()">&#9776;</span></li>
+      <li><a href="#home">Home</a></li>
+      <li style = "float:right"><a href="https://github.com/ShaheenCS"><img src ="https://ccss.carleton.ca//images/github-9-64.png" style="width:15px;height:15px;"></a></li>
+      <li style = "float:right"><a href="https://ca.linkedin.com/in/michelle-s"><img src ="https://www.nutmeg.com/assets/linkedin-logo-grey-a89f8829f8680662dc24c9c370926f08.png" style="width:15px;height:15px;"></a></li>
+      <li style = "float:right"><a href="#backtotop">Back to Top</a></h2>
+    </ul>
+
+    <!-- Side navigation code -->
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#about">About</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <!-- JavaScript for sidenav -->
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+
+    </script>
+    <h2 id="backtotop"></h2>
+    <div class="main-image" style="background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('http://www.mandarinoscoffee.com/inicio/wp-content/uploads/2016/01/coffee-photography-coffee-beans-wide.jpg'); ">
+
+      <div class="main-subject" style>
+        <br><br><br><br>
+        <h1><b> Hello World </b></h1><br>
+        <h3> Welcome to my online resume website thing </h3>
+      </div>
+    </div>
+    <h4>Powered by Coffee</h4>
+    <div class="main">
+      <h2 id="about"><u>About Me</u></h2>
+      <br><br>
+      <h2 id="resume"><u>Resume PDF</u></h2>
+      <br><br><center>
+      <iframe src="https://drive.google.com/file/d/0B37cjACpxBv1UmJsdmJkaFpINlE/preview" width="640" height="480"></iframe>
+      <br><br></center>
+      The purpose of this is to test the body text.
+      <br><br>
+      The purpose of this is to test the body text.
+      <br><br>
+      The purpose of this is to test the body text.
+      <br><br>
+      The purpose of this is to test the body text.
+      <br><br>
+      <h2 id="contact"><u>Contact</u></h2>
+      The purpose of this is to test the body text.
+      <br><br>
+      The purpose of this is to test the body text.
+      <br><br>
+      The purpose of this is to test the body text.
+      <br><br>
+      The purpose of this is to test the body text.
+      <br><br>
+    </div>
+  </body>
+</html>
